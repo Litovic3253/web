@@ -303,7 +303,6 @@ h1 {
   margin-bottom: auto;
   font-weight: medium;
   position: fixed;
-
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -466,7 +465,7 @@ h1 {
   top: -1500px;
   right: 0;
   bottom: 0;
-  z-index: 2001;
+  z-index: 700;
   transition: left 0.3s linear;
 }
 
@@ -484,7 +483,7 @@ h1 {
   top: -1500px;
   right: 0;
   bottom: 0;
-  z-index: 2001;
+  z-index: 700;
   transition: left 0.3s linear;
 }
 
@@ -502,7 +501,7 @@ h1 {
   top: -1000px;
   left: 0;
   bottom: 0;
-  z-index: 2000;
+  z-index: 600;
   transition: right 0.3s linear;
   overflow-y: scroll;
 }
@@ -694,6 +693,21 @@ h1 {
   visibility: visible;
   transition: opacity 0.3s ease-in-out;
 }
+
+@media (max-width: 414px) {
+  .mobile-burger {
+    width: 100vw;
+  }
+
+  .main-callback {
+    width: 100vw;
+  }
+
+  .main-feedback {
+    width: 100vw;
+  }
+}
+
 
 @media (max-width: 767px) {
   .prices {
