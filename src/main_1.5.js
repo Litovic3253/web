@@ -68,57 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const toggleButton = document.querySelector(".text-content__button");
-//   const content = document.querySelector(".text-1");
-
-//   toggleButton.onclick = (function () {
-//     let expand = false;
-//     let startValueBtn = toggleButton.textContent;
-
-//     return function (e) {
-//       e.preventDefault();
-//       expand = !expand;
-//       content.classList.toggle("text-1" + "--expand");
-//       // toggleButton.classList.toggle(btn + "--reverse");
-
-//       if (expand) {
-//         toggleButton.textContent = "Свернуть";
-//       } else {
-//         toggleButton.textContent = startValueBtn;
-//       }
-//     };
-//   })();
-// });
-
-// function clickToExpand(block, btn, indexBtn) {
-//   indexBtn = !indexBtn ? 0 : +indexBtn;
-//   let benElem = document.querySelectorAll('+' + btn) [indexBtn];
-//   let blockElem = document.querySelector('+' + block);
-
-//   console.log(ieirueiuri)
-
-//   btnElem.onclick = function() {
-//   let expand = false;
-//   let startValueBtn = btnElem.textContent;
-
-//   return function(e) {
-//     e.preventDefault();
-//     expand = !expand;
-//     blockElem.classList.toggle(block + '--expand');
-//     btnElem.classList.toggle(btn + '--reverse');
-
-//     if (expand) {
-//       btnElem.textContent = 'Свернуть';
-//     } else {
-//       benElem.textContent = startValueBtn;
-//     }
-//   }
-//   }();
-// }
-
-// clickToExpand('text-1', 'text-content__link', 0);
-
 let btn = document.querySelector(".btn");
 let content = document.querySelector(".content");
 
@@ -154,6 +103,12 @@ callbackModalClose.addEventListener("click", function () {
   }
 });
 
+let blockC = document.querySelector('.overlay');
+
+blockC.addEventListener("click", function () {
+  mobileCallback.classList.remove("show-modal-call");
+});
+
 let message = document.querySelectorAll(".button-message");
 let mobileFeedback = document.querySelector(".mobile-feedback");
 let feedbackModalClose = document.querySelector(".feedback-modal__close");
@@ -170,6 +125,12 @@ feedbackModalClose.addEventListener("click", function () {
   if (!mobileBurger.classList.contains("show-modal-call")) {
     overlay.classList.remove("open");
   }
+});
+
+let blockM = document.querySelector('.overlay');
+
+blockM.addEventListener("click", function () {
+  mobileFeedback.classList.remove("show-modal-call");
 });
 
 let burger = document.querySelector(".mobile-button-burger");
@@ -189,4 +150,11 @@ burgerModalClose.addEventListener("click", function () {
   ) {
     overlay.classList.remove("open");
   }
+});
+
+let blockBurger = document.querySelector('.overlay');
+
+blockBurger.addEventListener("click", function () {
+  mobileBurger.classList.remove("show-modal-call");
+  overlay.classList.remove("open");
 });
